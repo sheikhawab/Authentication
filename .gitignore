@@ -1,0 +1,25 @@
+# Dependencies (node_modules)
+# Root folder wala node_modules (server ka)
+/node_modules
+
+# Client folder wala node_modules
+/client/node_modules
+
+# Vite/React build output
+/client/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables file (LAZMI IGNORE KARNA HAI)
+.env
+.env.local
+.env.development
+.env.production
+
+# IDEs and editors specific files
+.vscode/
+.idea/
