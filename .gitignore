@@ -14,12 +14,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment variables file (LAZMI IGNORE KARNA HAI)
-.env
-.env.local
-.env.development
-.env.production
-
 # IDEs and editors specific files
 .vscode/
 .idea/
