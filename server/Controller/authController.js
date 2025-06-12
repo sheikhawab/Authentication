@@ -34,6 +34,7 @@ export const createUser = async (req, res) => {
         email: user.email,
       },
       message: "User created and logged in successfully",
+      
     });
   } catch (error) {
     res.status(400).json({ status: "error", message: error.message });

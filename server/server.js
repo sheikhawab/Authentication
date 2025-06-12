@@ -15,9 +15,11 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    // origin: "*",
-    credentials: true,
+    origin: [
+      "http://localhost:5173", 
+      "https://82cd-2a02-cb80-40bc-a912-34ab-e561-dbd5-804b.ngrok-free.app", 
+    ],
+    credentials: true, 
   })
 );
 dbconnection();

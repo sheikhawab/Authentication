@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createUser } from '../Redux/Features/authSlice'; 
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -8,20 +9,22 @@ const Signup = () => {
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { loading, error, authenticate } = useSelector((state) => state.user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     if (!name || !email || !password) {
       alert("Sab fields bharna zaroori hai.");
       return;
     }
-
+    
     const newUser = { name, email, password };
-
+    
     dispatch(createUser(newUser)); 
-  };
+    navigate('/');
+  };  
 
   return (
     <>
